@@ -1,0 +1,24 @@
+<h2>Galería</h2>
+
+<div>
+  <img [src]="imagenCentral" [width]="tamanyo"/>
+</div>
+
+<div>
+  <button [disabled]="indice === 0" (click)="anteriorImagen()">Anterior</button>
+  <button [disabled]="indice === imagenes.length - 1" (click)="siguienteImagen()">Siguiente</button>
+  <button (click)="aumentar()">Aumentar</button>
+  <button (click)="disminuir()">Disminuir</button>
+  <button *ngIf="!isPlaying" (click)="play()">Play</button>
+  <button *ngIf="isPlaying" (click)="stop()">Stop</button>
+</div>
+
+<div>
+  <span>Anterior</span>
+  <img *ngFor="let imagen of imagenes; let i=index;"
+       (click)="seleccionarImagen(i)"
+       [class.seleccionada]="imagen === imagenCentral"
+       [src]="imagen" width="50"/>
+  <span>Siguiente</span>
+</div>
+

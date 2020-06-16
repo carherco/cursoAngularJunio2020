@@ -8,10 +8,9 @@ import { PieComponent } from './components/pie/pie.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { FormsModule } from '@angular/forms';
-import { HighlightDirective } from './directives/highlight.directive';
-import { RotateDirective } from './directives/rotate.directive';
 import { EjemplosPipeComponent } from './components/ejemplos-pipe/ejemplos-pipe.component';
-import { ExpPipe } from './pipes/exp.pipe';
+import { UtilsModule } from './utils/utils.module';
+import { UsersCrudComponent } from './components/users-crud/users-crud.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +19,14 @@ import { ExpPipe } from './pipes/exp.pipe';
     PieComponent,
     CabeceraComponent,
     BindingComponent,
-    HighlightDirective,
-    RotateDirective,
     EjemplosPipeComponent,
-    ExpPipe
+    UsersCrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    UtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
