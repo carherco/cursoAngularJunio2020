@@ -1,0 +1,12 @@
+<h2 appRotate="30" appHighlight duration="3">Binding</h2>
+
+<p appRotate="30" step="2">Texto que gira</p>
+
+<div [appHighlight]="colorResaltado" *ngIf="name">Hola, {{ name }}</div>
+
+<input value="{{ name }}" />
+<input [value]="name" (keyup)="cambiarNombre2($event)" />
+<input [value]="name" (keyup)="name = $event.target.value" />
+<input [(ngModel)]="name" />
+
+<button (click)="cambiarNombre($event)">Click</button>
