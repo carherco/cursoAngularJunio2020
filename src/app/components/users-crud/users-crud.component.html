@@ -1,3 +1,49 @@
 <h2>CRUD Users</h2>
 
+<h3>Alta</h3>
+<div>
+    <label>Name: </label>
+    <input name="name" [(ngModel)]="newUser.name">
 
+    <label>Email: </label>
+    <input name="email" [(ngModel)]="newUser.email">
+
+    <label>Phone: </label>
+    <input name="phone" [(ngModel)]="newUser.phone">
+
+  <button (click)="addUser()">Añadir</button>
+</div>
+
+
+<h3>Listado</h3>
+<table>
+
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let user of users | filter"
+      [class.selected]="user.id === userSelected?.id"
+      (click)="selectUser(user)">
+    <td>{{ user.id }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.phone }}</td>
+    <td><button (click)="deleteUser(user)">Eliminar</button></td>
+  </tr>
+</table>
+
+<h3>Usuario seleccionado: </h3>
+<div *ngIf="userSelected">
+    <label>Name: </label>
+    <input name="name" [(ngModel)]="userSelected.name">
+
+    <label>Email: </label>
+    <input name="email" [(ngModel)]="userSelected.email">
+
+    <label>Phone: </label>
+    <input name="phone" [(ngModel)]="userSelected.phone">
+</div>

@@ -10,9 +10,31 @@ import { USERS } from 'src/app/data/users';
 export class UsersCrudComponent implements OnInit {
 
   users: Array<User> = USERS;
-  constructor() { }
+  userSelected: User;
+  newUser: User;
+  nextId = 11;
+
+  constructor() {
+    this.newUser = new User(this.nextId);
+  }
 
   ngOnInit(): void {
+  }
+
+  addUser() {
+    this.users.push(this.newUser);
+    this.users = [...this.users];
+    this.newUser = new User(++this.nextId);
+  }
+
+  selectUser(user: User) {
+    this.userSelected = {...user};
+  }
+
+  deleteUser(user: User) {
+    this.users = this.users.filter(
+      u => u.id !== user.id
+    );
   }
 
 }

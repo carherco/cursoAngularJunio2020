@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { EjemplosPipeComponent } from './components/ejemplos-pipe/ejemplos-pipe.component';
 import { UtilsModule } from './utils/utils.module';
 import { UsersCrudComponent } from './components/users-crud/users-crud.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UsersCrudComponent } from './components/users-crud/users-crud.component
     CabeceraComponent,
     BindingComponent,
     EjemplosPipeComponent,
-    UsersCrudComponent
+    UsersCrudComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
