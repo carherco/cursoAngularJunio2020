@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/User';
-import { USERS } from 'src/app/data/users';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-users-master',
@@ -9,19 +9,22 @@ import { USERS } from 'src/app/data/users';
 })
 export class UsersMasterComponent implements OnInit {
 
-  users: Array<User> = USERS;
+  users: Array<User> = [];
   userSelected: User;
   newUser: User;
   nextId = 11;
+  message = '';
 
-  constructor() {
+  constructor(private service: UsersService) {
     this.newUser = new User(this.nextId);
+    this.users = this.service.getAll();
   }
 
   ngOnInit(): void {
   }
 
   addUser() {
+    this.service.add(this.newUser);
     this.users.push(this.newUser);
     this.users = [...this.users];
     this.newUser = new User(++this.nextId);

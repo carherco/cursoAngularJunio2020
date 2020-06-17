@@ -14,6 +14,7 @@ import { UsersCrudComponent } from './components/users-crud/users-crud.component
 import { FilterPipe } from './pipes/filter.pipe';
 import { UsersMasterComponent } from './components/users-master/users-master.component';
 import { UsersDetalleComponent } from './components/users-detalle/users-detalle.component';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UsersDetalleComponent } from './components/users-detalle/users-detalle.
     UsersCrudComponent,
     FilterPipe,
     UsersMasterComponent,
-    UsersDetalleComponent
+    UsersDetalleComponent,
+    FormTemplateComponent
   ],
   imports: [
     BrowserModule,

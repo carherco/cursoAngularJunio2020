@@ -5,6 +5,7 @@ import { BindingComponent } from './components/binding/binding.component';
 import { EjemplosPipeComponent } from './components/ejemplos-pipe/ejemplos-pipe.component';
 import { UsersCrudComponent } from './components/users-crud/users-crud.component';
 import { UsersMasterComponent } from './components/users-master/users-master.component';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
 
 // localhost:4200/users/list
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   //   { path: 'list', component: UsersListComponent },
   //   { path: 'add', component: UsersAddComponent
   // ] },
-  { path: 'users/master', component: UsersMasterComponent }
+  { path: 'users/master', component: UsersMasterComponent },
+  { path: 'users/edit', component: FormTemplateComponent }
 ];
 
 @NgModule({
