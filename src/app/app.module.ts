@@ -12,6 +12,8 @@ import { EjemplosPipeComponent } from './components/ejemplos-pipe/ejemplos-pipe.
 import { UtilsModule } from './utils/utils.module';
 import { UsersCrudComponent } from './components/users-crud/users-crud.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { UsersMasterComponent } from './components/users-master/users-master.component';
+import { UsersDetalleComponent } from './components/users-detalle/users-detalle.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     BindingComponent,
     EjemplosPipeComponent,
     UsersCrudComponent,
-    FilterPipe
+    FilterPipe,
+    UsersMasterComponent,
+    UsersDetalleComponent
   ],
   imports: [
     BrowserModule,

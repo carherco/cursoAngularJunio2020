@@ -7,7 +7,9 @@ export class FilterPipe implements PipeTransform {
 
   transform(users: any) {
     console.log('Pipe');
-    return users;
+    return users.filter(
+      user => user.phone
+    );
   }
 
 }

@@ -5,3 +5,7 @@ p {
 .selected {
   background-color: yellow;
 }
+
+.menu-selected {
+  background-color: lightsalmon;
+}

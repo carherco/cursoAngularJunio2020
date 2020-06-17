@@ -1,4 +1,4 @@
-<h2>CRUD Users</h2>
+<h2>CRUD Users (Master)</h2>
 
 <h3>Alta</h3>
 <div>
@@ -37,13 +37,6 @@
 </table>
 
 <h3>Usuario seleccionado: </h3>
-<div *ngIf="userSelected">
-    <label>Name: </label>
-    <input name="name" [(ngModel)]="userSelected.name">
-
-    <label>Email: </label>
-    <input name="email" [(ngModel)]="userSelected.email">
-
-    <label>Phone: </label>
-    <input name="phone" [(ngModel)]="userSelected.phone">
-</div>
+<app-users-detalle
+    [user]="userSelected"
+    (deleteEvent)="deleteUser($event)"></app-users-detalle>

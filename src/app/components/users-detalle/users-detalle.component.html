@@ -1,0 +1,12 @@
+<div *ngIf="user">
+  <label>Name: </label>
+  <input name="name" [(ngModel)]="user.name">
+
+  <label>Email: </label>
+  <input name="email" [(ngModel)]="user.email">
+
+  <label>Phone: </label>
+  <input name="phone" [(ngModel)]="user.phone">
+
+  <button (click)="delete()">Eliminar</button>
+</div>
