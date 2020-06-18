@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="user">
     <h2>User Form (Template-driven)</h2>
     {{ user | json }}
     <form (ngSubmit)="onSubmit(); userForm.reset()" #userForm="ngForm">
@@ -45,3 +45,5 @@
 
     </form>
   </div>
+
+  <button (click)="goToList()">Ir al listado</button>

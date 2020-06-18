@@ -14,8 +14,9 @@
   <button (click)="addUser()">Añadir</button>
 </div>
 
-
 <h3>Listado</h3>
+
+Busca por email: <input #search>
 <table>
 
   <tr>
@@ -32,7 +33,10 @@
     <td>{{ user.name }}</td>
     <td>{{ user.email }}</td>
     <td>{{ user.phone }}</td>
-    <td><button (click)="deleteUser(user)">Eliminar</button></td>
+    <td>
+      <button (click)="deleteUser(user)">Eliminar</button>
+      <button (click)="goToEdit(user)">Editar</button>
+    </td>
   </tr>
 </table>
 
